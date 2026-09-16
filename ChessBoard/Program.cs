@@ -7,21 +7,12 @@ public class Program
         Console.OutputEncoding = System.Text.Encoding.Unicode;
               
         StandardMessages.GreetUser();
+        int number = StandardMessages.AskForInput();
+        Console.WriteLine($"Du valde {number}");
 
-        StandardMessages.AskForInput();
+        ChessBoard chessboard = new ChessBoard(number);
+        ChessBoard.RenderBoard(chessboard);
 
-        Int32.TryParse(Console.ReadLine(), out int number);
-        if (number >= 3 && number <= 50)
-        {
-            Console.WriteLine($"Du valde {number}");
 
-            ChessBoard chessboard = new ChessBoard(number);
-            ChessBoard.RenderBoard(chessboard);
-
-        }
-        else
-        {
-            Console.WriteLine($"Felaktig inmatning, numret: {number} är ogiltigt, numret måste vara mellan 3 - 50. försök igen. ");
-        }
     }
 }
