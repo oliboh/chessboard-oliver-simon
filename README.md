@@ -1,12 +1,12 @@
 # chessboard-oliver-simon
-This is a C# console application that renders a chessboard.\
+This is a C# console application that renders a chessboard.
 
 
 ## Requirements
 .NET 10\
 NuGet package SpectreConsole version 0.57.2
 
-### Upcoming features and changes
+## Upcoming features and changes
     - Adding a Chessboard Class 
     - Adding methods in the Chessboard class like RenderBoard()
 
@@ -28,3 +28,6 @@ Example:
     git clone
 
 7. Press Enter to create your local clone.
+
+## To read more about cloning a repository visit
+    -(https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
