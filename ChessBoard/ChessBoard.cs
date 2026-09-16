@@ -8,8 +8,16 @@ namespace ChessBoard
 {
     public class ChessBoard
     {
-        public static void RenderBoard(int number)
+        public int Size { get; set; }
+
+        public ChessBoard(int size)
         {
+            Size = size;
+        }
+        public static void RenderBoard(ChessBoard chessboard)
+        {
+            int number = chessboard.Size;
+
             for (int rows = 0; rows < number; rows++) 
             {
                 for (int columns = 0; columns < number; columns++)

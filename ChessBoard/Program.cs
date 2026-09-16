@@ -7,7 +7,8 @@ if (number >= 3 && number <= 50)
 {
     Console.WriteLine($"Du valde {number}");
 
-    ChessBoard.ChessBoard.RenderBoard(number);
+    ChessBoard.ChessBoard chessboard = new ChessBoard.ChessBoard(number);
+    ChessBoard.ChessBoard.RenderBoard(chessboard);
 
 }
 else
