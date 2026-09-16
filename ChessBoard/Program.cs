@@ -12,5 +12,5 @@ if (number >= 3 && number <= 50)
 }
 else
 {
-    Console.WriteLine("Felaktig inmatning, försök igen. ");
+    Console.WriteLine($"Felaktig inmatning, numret: {number} är ogiltigt, numret måste vara mellan 3 - 50. försök igen. ");
 }
