@@ -29,5 +29,5 @@ Example:
 
 7. Press Enter to create your local clone.
 
-## To read more about cloning a repository visit
-    -(https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+To read more about cloning a repository visit [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    
