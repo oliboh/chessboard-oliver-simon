@@ -2,7 +2,7 @@
 This is a C# console application that renders a chessboard\
 
 
-## Requirements
+### Requirements
     - .NET 10.
     - SpectreConsole version 0.57.2
      
