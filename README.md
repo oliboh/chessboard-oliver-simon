@@ -3,8 +3,8 @@ This is a C# console application that renders a chessboard.\
 
 
 ## Requirements
-.NET 10
-NuGet package SpectreConsole version 0.57.2
+.NET 10\
+NuGet package SpectreConsole version 0.57.2\
 
 ### Upcoming features and changes
     - Adding a Chessboard Class 
