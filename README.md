@@ -41,7 +41,7 @@ To read more about cloning a repository visit [Cloning a repository](https://doc
     
 ## Instructions for using the application.
 When you run the application the console will greet you, you will then be asked to input a number between 3-50.\
-If your input is within the scope of valid inputs the application will then render a chessboard the size of your input.
+If your input is within the scope of valid inputs the application will render a chessboard the size of your input.
 
 Example:
 
@@ -52,6 +52,20 @@ Example:
 >◼︎ ◻︎ ◼︎ ◻︎\
 >◻︎ ◼︎ ◻︎ ◼︎
 
+## NuGet Packages
+Spectre.Console version 0.57.2.\
+Spectre.Console allows us to customize our interfaces using colors, panels and much more.
 
+## Code Structure
+We have structured our code using different classes.
 
+StandardMessages is a class that contains methods for printing text to the user using Spectre.Console. It contains methods such as GreetUser(), AskForInput(), AskForAnother().
 
+UserInput is a class which purpose is handling inputs from the user, it contains methods such as SaveInput(), ValidateInput().
+
+ChessBoard is a class that specifies the properties of the chessBoard, it contains a constructor and the method RenderBoard(), used for rendering the chessboard.
+
+## Version Control
+"Git-arbete: kort information om hur ni arbetade med commits och merge conflict."
+## Choices and Crossroads
+"en kort motivering av de viktigaste valen i lösningen, till exempel hur ni validerar input, hur ni växlar mellan svarta och vita rutor och varför ni delat upp koden i metoder/klasser."
