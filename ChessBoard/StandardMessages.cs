@@ -9,12 +9,15 @@ namespace ChessBoard
     {
         public static void GreetUser()
         {
+            var figlet = new FigletText("Chessboard");
+            AnsiConsole.Write(figlet);
+
             var panel = new Panel("Hej och välkommen till ChessBoard.").RoundedBorder().Padding(2, 1);
             AnsiConsole.Write(panel);
         }
         public static int AskForInput()
         {
-            var prompt = new TextPrompt<int>("Hur stort schackbräde vill du skapa? Ange ett heltal mellan [green]3 - 50[/]: ").Validate(input =>
+            var prompt = new TextPrompt<int>("Hur stort schackbräde vill du skapa? Ange ett heltal mellan [bold]3 - 50[/]: ").Validate(input =>
             {
                 if (input >= 3 && input <= 50)
                 {
@@ -32,6 +35,11 @@ namespace ChessBoard
 
 
             //Console.Write("Hur stort schackbräde vill du skapa? Ange ett heltal mellan 3 - 50: ");
+        }
+
+        public static bool AskForAnother()
+        {
+            return AnsiConsole.Confirm("Do you want to create another board?");
         }
 
         public static void AskForInputTwo()

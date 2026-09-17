@@ -6,6 +6,9 @@ public class Program
     {
         string message = "";
         int size = 0;
+        bool isActive = true;
+
+
         Console.OutputEncoding = System.Text.Encoding.Unicode;
               
         StandardMessages.GreetUser();
@@ -26,13 +29,22 @@ public class Program
 
 
 
+        while(isActive)
+        {
+            int number = StandardMessages.AskForInput();
+            Console.WriteLine($"Du valde {number}");
 
-        int number = StandardMessages.AskForInput();
-        Console.WriteLine($"Du valde {number}");
+            ChessBoard chessboard = new ChessBoard(number);
+            ChessBoard.RenderBoard(chessboard);
 
-        ChessBoard chessboard = new ChessBoard(number);
-        ChessBoard.RenderBoard(chessboard);
-
-
+            if (StandardMessages.AskForAnother())
+            {
+                continue;
+            }
+            else
+            {
+                isActive = false;
+            }
+        }
     }
 }
