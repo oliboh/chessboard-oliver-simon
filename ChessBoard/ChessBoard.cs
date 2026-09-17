@@ -14,9 +14,9 @@ namespace ChessBoard
         {
             Size = size;
         }
-        public static void RenderBoard(ChessBoard chessboard)
+        public static void RenderBoard(ChessBoard chessBoard)
         {
-            int number = chessboard.Size;
+            int number = chessBoard.Size;
 
             for (int rows = 0; rows < number; rows++) 
             {
