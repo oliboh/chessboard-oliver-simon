@@ -18,7 +18,9 @@ namespace ChessBoard
 
         public static void AskForInput()
         {
-            AnsiConsole.Write("Hur stort schackbräde vill du skapa? Ange ett heltal mellan [bold]3 - 50[/]: ");            
+
+            var message = new Markup("Hur stort schackbräde vill du skapa? Ange ett heltal mellan [DeepSkyBlue1]3 - 50[/]: ");
+            AnsiConsole.Write(message);
         }
         
 
