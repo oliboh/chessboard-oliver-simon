@@ -11,34 +11,49 @@ public class Program
 
         Console.OutputEncoding = System.Text.Encoding.Unicode;
               
-        StandardMessages.GreetUser();
+      
 
-        do          
-        {
+        //do          
+        //{
             
-            Console.Write(message);
-            StandardMessages.AskForInputTwo();
-        }
-        while (!StandardMessages.ValidateInput(Console.ReadLine(), out message, out size));
+        //    Console.Write(message);
+        //    StandardMessages.AskForInputTwo();
+        //}
+        //while (!StandardMessages.ValidateInput(Console.ReadLine(), out message, out size));
 
-        Console.WriteLine(message);
+        //Console.WriteLine(message);
 
-        ChessBoard chessBoardTwo = new ChessBoard(size);
+        //ChessBoard chessBoardTwo = new ChessBoard(size);
 
-        ChessBoard.RenderBoard(chessBoardTwo);
+        //ChessBoard.RenderBoard(chessBoardTwo);
 
 
 
         while(isActive)
         {
-            int number = StandardMessages.AskForInput();
-            Console.WriteLine($"Du valde {number}");
+            StandardMessages.GreetUser();
+            StandardMessages.AskForInput();
+            
+            string userInput = UserInput.SaveInput();
 
-            ChessBoard chessboard = new ChessBoard(number);
-            ChessBoard.RenderBoard(chessboard);
-
+            bool correctInput = UserInput.ValidateInput(userInput, out message, out int number);
+            //int number = UserInput.ValidateInput(StandardMessages.AskForInput(), out message);            
+            if (correctInput)
+            {
+                Console.WriteLine(message);
+                ChessBoard chessboard = new ChessBoard(number);
+                ChessBoard.RenderBoard(chessboard);                
+            }
+            else
+            {
+                Console.WriteLine(message);
+                Console.ReadKey(true);
+                Console.Clear();
+                continue;
+            }
             if (StandardMessages.AskForAnother())
             {
+                Console.Clear();
                 continue;
             }
             else
