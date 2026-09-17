@@ -26,11 +26,32 @@ namespace ChessBoard
                 }
             });
 
+
             int number = AnsiConsole.Prompt(prompt);
             return number;
 
 
             //Console.Write("Hur stort schackbräde vill du skapa? Ange ett heltal mellan 3 - 50: ");
+        }
+
+        public static void AskForInputTwo()
+        {
+            Console.Write("\nHur stort schackbräde vill du skapa? Ange ett heltal mellan 3 - 50: ");
+        }
+        public static bool ValidateInput(string numberInput, out string message, out int size)
+        {
+                if (Int32.TryParse(numberInput, out int number) && number >= 3 && number <= 50)
+                {
+                    message = $"Du valde {number}.";
+                    size = number;
+                    return true;
+                }
+                else
+                {
+                    message = $"Felaktig inmatning, numret {number} är ogiltigt, numret måste vara mellan 3 - 50. försök igen.";
+                    size = number;
+                    return false;
+                }
         }
     }
 }
