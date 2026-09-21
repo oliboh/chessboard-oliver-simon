@@ -15,12 +15,11 @@ namespace ChessBoard
             Size = size;
         }
         public static void RenderBoard(ChessBoard chessBoard)
-        {
-            int number = chessBoard.Size;
+        {         
 
-            for (int rows = 0; rows < number; rows++) 
+            for (int rows = 0; rows < chessBoard.Size; rows++) 
             {
-                for (int columns = 0; columns < number; columns++)
+                for (int columns = 0; columns < chessBoard.Size; columns++)
                 {
                     if ((rows + columns) % 2 == 0)
                     {

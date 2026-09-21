@@ -3,8 +3,7 @@
 public class Program
 {
     public static void Main()
-    {
-        string message = "";        
+    {           
         bool isActive = true;
 
         Console.OutputEncoding = System.Text.Encoding.Unicode;
@@ -16,7 +15,7 @@ public class Program
             
             string userInput = UserInput.SaveInput();
 
-            bool correctInput = UserInput.ValidateInput(userInput, out message, out int number);                       
+            bool correctInput = UserInput.ValidateInput(userInput, out string message, out int number);                       
             if (correctInput)
             {
                 Console.WriteLine(message);
