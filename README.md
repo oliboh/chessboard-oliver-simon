@@ -25,7 +25,7 @@ This is a C# console application that renders a chessboard.
     >cd c:\user\USERNAME\desired-path
     
     
-6. Type git cloned followed by the URL copied.
+6. Type git clone followed by the URL copied.
 
     Example:
     >git clone >HTTPS-URL<
@@ -66,6 +66,9 @@ UserInput is a class which purpose is handling inputs from the user, it contains
 ChessBoard is a class that specifies the properties of the chessBoard, it contains a constructor and the method RenderBoard(), used for rendering the chessboard.
 
 ## Version Control
-"Git-arbete: kort information om hur ni arbetade med commits och merge conflict."
-## Choices and Crossroads
-"en kort motivering av de viktigaste valen i lösningen, till exempel hur ni validerar input, hur ni växlar mellan svarta och vita rutor och varför ni delat upp koden i metoder/klasser."
+We are using Git to version control the application. We take turns writing code and commit our changes using git and push it to a shared repository on GitHub.
+## Technical choices
+We chose to structure our code using classes so that each class would have only one resposibility.\
+Rendering the chessboard is done by using the modulo-operator. We are using a for loop for every row and a nested for loop for every column. By dividing the sum of rows+columns and checking the remainder we can then choose to render either a black or a white square.
+
+
