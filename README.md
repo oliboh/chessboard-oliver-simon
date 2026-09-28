@@ -4,11 +4,6 @@ This is a C# console application that renders a chessboard.
 ## Requirements
 .NET 10
 
-## Upcoming features and changes
-    -Implement SpectreConsole features for customizing how the terminal displays the application.
-    -Adding a method for handling inputs.
-    -Updating README.md
-
 ## Cloning this repository
 
 1. Navigate to the [main page of the repository.](https://github.com/oliboh/chessboard-oliver-simon)    
