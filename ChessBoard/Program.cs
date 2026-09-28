@@ -13,7 +13,7 @@ public class Program
             StandardMessages.GreetUser();
             StandardMessages.AskForInput();
             
-            string userInput = UserInput.SaveInput();
+            string userInput = Console.ReadLine();
 
             bool correctInput = UserInput.ValidateInput(userInput, out string message, out int number);                       
             if (correctInput)
