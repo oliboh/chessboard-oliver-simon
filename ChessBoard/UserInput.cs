@@ -5,12 +5,7 @@ using System.Text;
 namespace ChessBoard
 {
     public class UserInput
-    {
-
-        public static string SaveInput()
-        {
-            return Console.ReadLine();
-        }
+    {      
         public static bool ValidateInput(string numberInput, out string message, out int number)
         {
             if (Int32.TryParse(numberInput, out int validatedNumber) && validatedNumber >= 3 && validatedNumber <= 50)
